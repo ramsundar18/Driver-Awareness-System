@@ -22,13 +22,6 @@ kp7 , des7 = orb.detectAndCompute(img7,None)
 kp8 , des8 = orb.detectAndCompute(img8,None)
 
 
-#imgkp1 = cv2.drawKeypoints(img1,kp1,None)#imgkp2 = cv2.drawKeypoints(img2,kp2,None)
-#imgkp3 = cv2.drawKeypoints(img3,kp3,None)
-#imgkp4 = cv2.drawKeypoints(img4,kp4,None)
-#imgkp5 = cv2.drawKeypoints(img5,kp5,None)
-#imgkp6 = cv2.drawKeypoints(img6,kp6,None)
-#imgkp7 = cv2.drawKeypoints(img7,kp7,None)
-#imgkp8 = cv2.drawKeypoints(img8,kp8,None)
 
 bf = cv2.BFMatcher()
 matches = bf.knnMatch(des1,des2,k=2)
@@ -45,17 +38,6 @@ img9 = cv2.drawMatchesKnn(img1,kp1,img2,kp2,good,None,flags=2)
 img10 = cv2.drawMatchesKnn(img3,kp3,img4,kp4,good,None,flags=2)
 img11 = cv2.drawMatchesKnn(img5,kp5,img6,kp6,good,None,flags=2)
 img12 = cv2.drawMatchesKnn(img7,kp7,img8,kp8,good,None,flags=2)
-
-#cv2.imshow('kp1',imgkp1)
-#cv2.imshow('kp2',imgkp2)
-#cv2.imshow('kp3',imgkp3)
-#cv2.imshow('kp4',imgkp4)
-#cv2.imshow('kp5',imgkp5)
-#cv2.imshow('kp6',imgkp6)
-#cv2.imshow('kp7',imgkp7)
-#cv2.imshow('kp8',imgkp8)
-
-
 
 cv2.imshow('img1',img1)
 cv2.imshow('img2',img2)
